@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Savory Haven Restaurant</title>
+
+    <style>
+        /* GENERAL STYLING */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fffaf3;
+            color: #30251f;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            background-color: #3b2419;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #f2bd72;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 480px;
+            padding: 80px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #f5dfc4, #fff4e5);
+        }
+
+        .hero .tagline {
+            color: #a05b32;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            max-width: 650px;
+            font-size: clamp(36px, 6vw, 60px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 550px;
+            font-size: 17px;
+            margin-bottom: 30px;
+            color: #625248;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 26px;
+            background-color: #9b542e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #71391e;
+        }
+
+        /* GENERAL SECTION STYLING */
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #76685f;
+        }
+
+        /* ABOUT PREVIEW */
+        .welcome {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .welcome p {
+            margin: 15px 0 25px;
+            color: #625248;
+        }
+
+        /* FEATURED MENU */
+        .featured-menu {
+            background-color: #f5eadc;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background-color: white;
+            padding: 28px 22px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #ead8c5;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(59, 36, 25, 0.12);
+        }
+
+        .menu-card h3 {
+            margin-bottom: 10px;
+            color: #71391e;
+        }
+
+        .menu-card p {
+            color: #76685f;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: bold;
+            color: #9b542e;
+        }
+
+        /* CALL TO ACTION */
+        .cta {
+            text-align: center;
+            background-color: #3b2419;
+            color: white;
+        }
+
+        .cta p {
+            margin: 12px 0 25px;
+            color: #ead8c5;
+        }
+
+        .cta .button {
+            background-color: #f2bd72;
+            color: #30251f;
+        }
+
+        .cta .button:hover {
+            background-color: #e5a64f;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #241710;
+            color: #e8d9ce;
+            text-align: center;
+            padding: 22px 8%;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero {
+                min-height: 400px;
+                padding: 60px 7%;
+            }
+
+            section {
+                padding: 50px 7%;
+            }
+
+            .menu-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header>
+        <div class="logo">Savory Haven</div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero">
+            <p class="tagline">Welcome to Savory Haven</p>
+
+            <h1>Good Food, Great Moments.</h1>
+
+            <p>
+                Discover delicious meals, warm hospitality, and a cozy
+                dining experience made for sharing with the people
+                who matter most.
+            </p>
+
+            <a href="menu.html" class="button">Explore Our Menu</a>
+        </section>
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome">
+            <div class="section-heading">
+                <h2>A Place to Enjoy Every Bite</h2>
+            </div>
+
+            <p>
+                At Savory Haven, we believe that good food brings
+                people together. From satisfying favorites to
+                freshly prepared meals, we aim to make every visit
+                special.
+            </p>
+
+            <a href="about.html" class="button">Discover Our Story</a>
+        </section>
+
+        <!-- FEATURED MENU SECTION -->
+        <section class="featured-menu">
+            <div class="section-heading">
+                <h2>Our Featured Dishes</h2>
+                <p>Here are a few customer favorites.</p>
+            </div>
+
+            <div class="menu-container">
+
+                <div class="menu-card">
+                    <h3>Classic Beef Burger</h3>
+                    <p>
+                        A juicy beef patty with fresh vegetables
+                        and our signature sauce.
+                    </p>
+                    <div class="price">₱149</div>
+                </div>
+
+                <div class="menu-card">
+                    <h3>Creamy Chicken Pasta</h3>
+                    <p>
+                        Tender chicken and pasta tossed in a
+                        rich, creamy sauce.
+                    </p>
+                    <div class="price">₱179</div>
+                </div>
+
+                <div class="menu-card">
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>
+                        Golden, crispy chicken served with
+                        rice and our special gravy.
+                    </p>
+                    <div class="price">₱129</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta">
+            <h2>Make Every Meal Special</h2>
+
+            <p>
+                Visit Savory Haven and enjoy good food
+                in a welcoming atmosphere.
+            </p>
+
+            <a href="contact.html" class="button">Contact Us</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Savory Haven Restaurant. All rights reserved.</p>
+        <p>Good Food. Great Moments.</p>
+    </footer>
+
+</body>
+</html>
